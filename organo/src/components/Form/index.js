@@ -15,14 +15,18 @@ const Formulario = () => {
         'Inovação e Gestão'
     ]
 
+    const save = (event) => {
+        event.preventDefault()
+    }
+
     return (
         <section className="form">
-            <form>
+            <form onSubmit={save}>
                 <h2>Preencha os dados para criar os cards do colaborador</h2>
-                <TextForm label="Nome" placeholder="Digite seu nome" />
-                <TextForm label="Cargo" placeholder="Digite seu cargo" />
+                <TextForm obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
+                <TextForm obrigatorio={true} label="Cargo" placeholder="Digite seu cargo" />
                 <TextForm label="Imagem" placeholder="Digite o endereço da imagem" />
-                <List label="Time" itens={teams}/>
+                <List obrigatorio={true} label="Time" itens={teams}/>
                 <Button>
                     Criar card
                 </Button>
