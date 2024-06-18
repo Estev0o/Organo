@@ -5,7 +5,7 @@ const TextForm = (props) => {
     return (
         <div className="campo-texto">
             <label>{props.label}</label>
-            <input placeholder={placeholderDiff}></input> 
+            <input required={props.obrigatorio} placeholder={placeholderDiff}></input> 
         </div>
     )
 }
