@@ -4,11 +4,13 @@ import './team.css'
 const Team = (props) => {
     const cssTeams = {backgroundColor: props.secondaryColor};
     return (        
-        <section className='team' style={cssTeams}>
+        (props.colaboradores.length > 0) ? <section className='team' style={cssTeams}>
             <h3 style={{borderColor: props.primaryColor}}>{props.name}</h3>
-            <Employees/>
-            
+            <div className='colaboradores'>
+                {props.colaboradores.map( employee => <Employees name={employee.nome} cargo={employee.cargo} img={employee.imagem}/> )} 
+            </div>
         </section>
+        : ''
     )
 }
 
