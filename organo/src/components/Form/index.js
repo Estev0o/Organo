@@ -7,16 +7,6 @@ import { useState } from "react";
 
 const Formulario = (props) => {
 
-    const teams = [
-        'Programação',
-        'Front-End',
-        'Data Sciemce',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const save = (event) => {
         event.preventDefault()
         props.aoColaboradorCadastrado({
@@ -61,7 +51,7 @@ const Formulario = (props) => {
                 <List 
                     obrigatorio={true} 
                     label="Time" 
-                    itens={teams}
+                    itens={props.times}
                     valueR={time}
                     OnAlter={valueR => setTime(valueR)}
                 />
