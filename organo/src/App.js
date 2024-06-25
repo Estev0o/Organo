@@ -51,7 +51,7 @@ function App(props) {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
+      <Formulario times={teams.map(teams => teams.name)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
       {teams.map(team => <Team key={team.name} name={team.name} 
       primaryColor={team.primaryColor}
       secondaryColor={team.secondaryColor}/>)}
