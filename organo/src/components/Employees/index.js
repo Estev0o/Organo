@@ -3,7 +3,7 @@ import './employees.css'
 const Employees = (props) => {
     return (
         <div className='employee'>
-            <div className='cabecalho'>
+            <div className='cabecalho' style={{backgroundColor: props.corDeFundo}}>
                 <img src={props.img} alt={props.name} />
             </div>
             <div className='footer'>
