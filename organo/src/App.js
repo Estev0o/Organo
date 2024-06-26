@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Banner from './components/banner';
 import Formulario from './components/Form';
 import Team from './components/Team';
+import Footer from './components/footer';
+
 
 function App(props) {
 
@@ -59,6 +61,7 @@ function App(props) {
         secondaryColor={team.secondaryColor} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === team.name)}
         />)}
+        <Footer/>
     </div>
   );
 }
